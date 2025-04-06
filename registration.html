@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Form</title>
+    <style>
+        body {
+            font-family: Arial;
+            background-color: lightgray;
+            margin: 0;
+            padding: 20px;
+        }
+        
+        .form-box {
+            background-color: white;
+            width: 400px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid black;
+            border-radius: 5px;
+        }
+        
+        h1 {
+            text-align: center;
+            color: darkblue;
+        }
+        
+        .input-field {
+            margin-bottom: 15px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid gray;
+            border-radius: 3px;
+        }
+        
+        .radio-options {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .radio-option {
+            display: flex;
+            align-items: center;
+        }
+        
+        .radio-option input {
+            margin-right: 5px;
+        }
+        
+        button {
+            background-color: darkblue;
+            color: white;
+            border: none;
+            padding: 10px;
+            width: 100%;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        .login-link {
+            text-align: center;
+            margin-top: 15px;
+        }
+        
+        .required:after {
+            content: " *";
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-box">
+        <h1>Registration Form</h1>
+        
+        <form>
+            <div class="input-field">
+                <label for="name">Full Name</label>
+                <input type="text" id="name">
+            </div>
+            
+            <div class="input-field">
+                <label for="userid" class="required">User ID</label>
+                <input type="text" id="userid" required>
+            </div>
+            
+            <div class="input-field">
+                <label for="email" class="required">Email</label>
+                <input type="email" id="email" required>
+            </div>
+            
+            <div class="input-field">
+                <label for="password" class="required">Password</label>
+                <input type="password" id="password" required>
+            </div>
+            
+            <div class="input-field">
+                <label class="required">Gender</label>
+                <div class="radio-options">
+                    <div class="radio-option">
+                        <input type="radio" id="male" name="gender" value="male" required>
+                        <label for="male">Male</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="female" name="gender" value="female">
+                        <label for="female">Female</label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="input-field">
+                <label for="country" class="required">Country</label>
+                <select id="country" required>
+                    <option value="">-- Select Country --</option>
+                    <option value="US">USA</option>
+                    <option value="UK">UK</option>
+                    <option value="CA">Canada</option>
+                    <option value="IN">India</option>
+                    <option value="JP">Japan</option>
+                </select>
+            </div>
+            
+            <div class="input-field">
+                <label for="zipcode" class="required">Zip Code</label>
+                <input type="text" id="zipcode" required>
+            </div>
+            
+            <div class="input-field">
+                <label for="language" class="required">Language</label>
+                <select id="language" required>
+                    <option value="">-- Select Language --</option>
+                    <option value="en">English</option>
+                    <option value="es">Spanish</option>
+                    <option value="fr">French</option>
+                    <option value="de">German</option>
+                </select>
+            </div>
+            
+            <button type="submit">Register Now</button>
+            
+            <div class="login-link">
+                Already have an account? <a href="#">Login here</a>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
